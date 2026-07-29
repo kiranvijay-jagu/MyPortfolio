@@ -5,7 +5,7 @@ export const projects = [
     id: 'agrismart-ai',
     title: 'AgriSmart AI',
     tagline: 'AI-assisted crop advisory for smallholder farmers',
-    image: "/projects/agrismart.png",
+    image: "image: `${import.meta.env.BASE_URL}projects/agrismart.png`",
     description:
       'A backend-driven platform that uses machine learning to recommend crops, detect plant disease from images, and alert farmers about weather risks in their region.',
     details:
@@ -18,7 +18,7 @@ export const projects = [
     id: 'smart-water-safety',
     title: 'Smart Water Safety & Disease Alert System',
     tagline: 'Real-time water quality monitoring and outbreak alerts',
-    image: "/projects/waterproject.png",
+    image: "image: `${import.meta.env.BASE_URL}projects/waterproject.png`",
     description:
       'A monitoring system that tracks water quality indicators and issues early alerts for potential waterborne disease outbreaks in a community.',
     details:
@@ -31,7 +31,7 @@ export const projects = [
     id: 'dairyfarm',
     title: 'Smart Dairy Farm',
     tagline: 'Excellence in Dairy Farming.',
-    image: "/projects/dairyfarm.png",
+    image: "image: `${import.meta.env.BASE_URL}projects/dairyfarm.png`",
     description:
       'A modern dairy farming platform focused on intelligent livestock management, operational efficiency, and sustainable milk production through advanced technologies and data-driven insights.',
     details:
@@ -44,7 +44,7 @@ export const projects = [
     id: 'multilingual-chat',
     title: 'Multilingual Group Chat',
     tagline: 'Real-time group chat with on-the-fly language translation',
-    image: "/projects/multichat.png",
+    image: "image: `${import.meta.env.BASE_URL}projects/multichat.png`",
     description:
       'A group chat application where each participant can read messages in their own preferred language, translated in real time.',
     details:

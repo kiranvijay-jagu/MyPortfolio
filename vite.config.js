@@ -1,12 +1,10 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// Vite configuration — React plugin only, no extra bloat.
-// Keeping this minimal helps keep the Lighthouse performance score high.
 export default defineConfig({
+  base: '/MyPortfolio/',
   plugins: [react()],
   build: {
-    // Split vendor code so browsers can cache framer-motion/react separately
     rollupOptions: {
       output: {
         manualChunks: {
