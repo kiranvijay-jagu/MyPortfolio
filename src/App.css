@@ -1,0 +1,14 @@
+/* Alternate subtle background tone between sections so each one reads as
+   a distinct block on scroll, without hard borders. */
+#about,
+#projects,
+#contact {
+  background: var(--color-bg-alt);
+}
+
+#home,
+#skills,
+#experience,
+#certifications {
+  background: var(--color-bg);
+}

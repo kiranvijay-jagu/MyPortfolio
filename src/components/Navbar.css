@@ -1,0 +1,113 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: var(--nav-height);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition-medium), border-color var(--transition-medium);
+}
+
+/* Glassmorphism engages once the user scrolls */
+.navbar--scrolled {
+  background: rgba(10, 10, 15, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.navbar__inner {
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.navbar__links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar__link {
+  position: relative;
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  padding: 0.4rem 0.1rem;
+  transition: color var(--transition-fast);
+}
+
+.navbar__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+  transition: width var(--transition-fast);
+}
+
+.navbar__link:hover {
+  color: var(--color-text-primary);
+}
+
+.navbar__link--active {
+  color: var(--color-text-primary);
+}
+
+.navbar__link--active::after {
+  width: 100%;
+}
+
+.navbar__toggle {
+  display: none;
+  color: var(--color-text-primary);
+}
+
+.navbar__mobile-menu {
+  display: none;
+}
+
+/* ---------- Responsive: tablet and mobile ---------- */
+@media (max-width: 860px) {
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__toggle {
+    display: flex;
+  }
+
+  .navbar__mobile-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    background: rgba(10, 10, 15, 0.95);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0.5rem 1.5rem 1.25rem;
+    overflow: hidden;
+  }
+
+  .navbar__mobile-menu .navbar__link {
+    display: block;
+    padding: 0.75rem 0;
+    font-size: 1rem;
+  }
+
+  .navbar__mobile-menu .navbar__link::after {
+    display: none;
+  }
+}

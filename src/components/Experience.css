@@ -1,0 +1,105 @@
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 2.5rem;
+}
+
+/* The connecting vertical line running through all markers */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-accent-blue), var(--color-accent-purple));
+  opacity: 0.4;
+}
+
+.timeline__item {
+  position: relative;
+}
+
+.timeline__marker {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.4rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.timeline__content {
+  padding: 1.5rem 1.75rem;
+}
+
+.timeline__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline__header h3 {
+  font-size: 1.1rem;
+}
+
+.timeline__period {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.timeline__company {
+  color: var(--color-accent-indigo);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.timeline__desc {
+  color: var(--color-text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 1rem;
+}
+
+.timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline__tags li {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 600px) {
+  .timeline {
+    padding-left: 1.75rem;
+  }
+
+  .timeline__marker {
+    left: -1.75rem;
+  }
+
+  .timeline__content {
+    padding: 1.25rem;
+  }
+}
+
+.timeline__links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
