@@ -43,7 +43,7 @@ export default function Hero() {
           </p>
 
           <div className="hero__actions">
-            <a href="/resume.pdf" className="btn btn-primary" download>
+            <a href="https://drive.google.com/file/d/1CutR22FJcyW-YjnFPJNfLx5CWXCO95Ej/view?usp=drive_link" className="btn btn-primary" download>
               <FiDownload /> Download Resume
             </a>
             <a

@@ -53,4 +53,19 @@ export const projects = [
     github: 'https://github.com/kiranvijay-jagu/group-chat-app',
     demo: '',
   },
+
+
+{
+    id: 'AI-Resume-Analyzer',
+    title: 'AI Resume Analyzer',
+    tagline: 'An AI Resume Assistant that delivers personalized, context-aware career insights.',
+    image:  `${import.meta.env.BASE_URL}projects/resumeanalyzer.png`,
+    description:
+      'An AI-powered resume assistant that analyzes resumes, provides ATS-based feedback, and delivers context-aware career guidance through an intelligent chatbot.',
+    details:
+'The AI Resume Assistant is a full-stack web application designed to help users analyze resumes, evaluate ATS compatibility, and receive AI-powered career guidance through an interactive chatbot. Developed using Django, HTML, CSS, JavaScript, and SQLite/PostgreSQL, it supports secure user authentication, resume upload, and personalized profile management. The application implements Retrieval-Augmented Generation (RAG) using LangChain, ChromaDB, and Hugging Face Embeddings to retrieve relevant resume content and integrates the Groq Llama API to generate context-aware responses. It also utilizes PyMuPDF and python-docx to extract text from PDF and DOCX resumes, enabling intelligent resume analysis and personalized career recommendations. This project demonstrates my expertise in backend development, AI integration, and building scalable intelligent web applications using modern Generative AI technologies.',
+tech: ['Python', 'Django', 'HTML', 'CSS', 'JavaScript', 'SQLite', 'LangChain', 'ChromaDB', 'Groq API', 'Hugging Face', 'PyMuPDF'],
+github: 'https://github.com/kiranvijay-jagu/resumeanalyzer',
+    demo: '',
+  },
 ]
